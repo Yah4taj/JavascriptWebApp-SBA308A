@@ -1,13 +1,14 @@
-import { API_KEY, BASE_URL, } from "./config";
+
 
 import { API_KEY,BASE_URL } from "./config";
 
 
-export async function fetchData(query) {
+export async function fetchData() {
     try {
-        const response = await fetch(`${BASE_URL}/search?q=${query}`, {
+        const response = await fetch(`${BASE_URL}/search?q=${ids}`, {
             method: "GET",
             headers: {
+
                 "Authorization": `Bearer ${API_KEY}`,
                 "Content-Type": "application/json"
             }
@@ -24,7 +25,7 @@ export async function fetchData(query) {
     }
 }
 
-export async function postData(data) {
+export async function postData() {
     try {
         const response = await fetch(`${BASE_URL}/submit`, {
             method: "POST",
