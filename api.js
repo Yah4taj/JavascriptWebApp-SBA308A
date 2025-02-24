@@ -1,11 +1,11 @@
 
 
-import { API_KEY,BASE_URL } from "./config";
+// import { API_KEY,BASE_URL } from "./config";
 
 
 export async function fetchData() {
     try {
-        const response = await fetch(`${BASE_URL}/search?q=${ids}`, {
+        const response = await fetch(`${BASE_URL}/search?q=${id}`, {
             method: "GET",
             headers: {
 

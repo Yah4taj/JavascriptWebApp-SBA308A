@@ -1,38 +1,156 @@
-
+/* Body/ Conatianer Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
 }
-#crypto-container {
-   
+
+.container {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Crypto Container Styles */
 #crypto-container {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #007bff; 
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    display: inline-block;
+    padding: 20px;
+    background: #3498db; /* Blue background */
+    color: white; /* White text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     text-align: left;
-    border-radius: 8px; 
 }
 
-}
-.crypto-item {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+/* Text contrast inside container */
+#crypto-container h2 {
+    color: white; 
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
+#crypto-container p {
+    margin: 12px 0;
+    color: white; /* Ensure readability */
+}
 
+#crypto-container strong {
+    color: #ecf0f1; /* Light gray for better readability */
+}
+
+/* Dropdown Styling */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+/* Blue outline when dropdown is selected */
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button Styles */
 button {
-    border: 2px solid blue; 
-    background-color: white; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    cursor: pointer; 
+    border: 2px solid #3498db;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: lightblue; 
+    background-color: #3498db;
+    color: white;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Status Indicators */
+.error {
+    color: #e74c3c;
+    padding: 10px;
+    background-color: #fadbd8;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: none;
+}
+
+.loading {
+    display: none;
+    margin: 20px 0;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Price Change Indicators */ Easier for user to see changes
+.positive-change {
+    color: #2ecc71; /* Green */
+    font-weight: bold;
+}
+
+.negative-change {
+    color: #e74c3c; /* Red */
+    font-weight: bold;
+}
+
+/* Responsive Design (mobile app) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .control-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Heading Styles */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Keep dropdown and button aligned */
+.control-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Screens */
+@media (max-width: 480px) {
+    select {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
