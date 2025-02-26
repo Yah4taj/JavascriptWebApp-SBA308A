@@ -98,8 +98,8 @@ button:disabled {
 
 /* Price Change Indicators */ Easier for user to see changes
 .positive-change {
-    color: #2ecc71; /* Green */
-    font-weight: bold;
+    color: #0db87f; /* Green
+    font-weight: bold; */
 }
 
 .negative-change {
@@ -107,25 +107,6 @@ button:disabled {
     font-weight: bold;
 }
 
-/* Responsive Design (mobile app) */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    .control-group {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    select {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
-    }
-}
 
 /* Heading Styles */
 h1 {
@@ -147,10 +128,3 @@ h2 {
     align-items: center;
 }
 
-/* Media Screens */
-@media (max-width: 480px) {
-    select {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
